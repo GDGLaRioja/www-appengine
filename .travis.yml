@@ -19,16 +19,16 @@ install:
   
 
 # [START travis_deploy]
-#deploy:
-#  provider: gae
-#  skip_cleanup: true
-#  keyfile: gdglarioja-8eaa4e16b907.json
-#  project: gdglarioja-site
-#  version: 2
-#  default: true
-#  on:
-#    all_branches: true
-# 
+deploy:
+  provider: gae
+  skip_cleanup: true
+  keyfile: gdglarioja-8eaa4e16b907.json
+  project: gdglarioja-site
+  version: 2
+  default: true
+  on:
+    all_branches: true
+ 
 # [END travis_deploy]
 
 script:
