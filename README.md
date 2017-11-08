@@ -1,4 +1,4 @@
-## www-appengine www-appengine [![Build Status](https://travis-ci.org/GDGLaRioja/www-appengine.svg?branch=master)](https://travis-ci.org/GDGLaRioja/www-appengine) 
+## www-appengine [![Build Status](https://travis-ci.org/GDGLaRioja/www-appengine.svg?branch=master)](https://travis-ci.org/GDGLaRioja/www-appengine) 
 
 
 # DevFest Update Day
