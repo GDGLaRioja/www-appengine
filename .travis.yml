@@ -1,7 +1,11 @@
-# Use Dockerized infrastructure
 sudo: false
 language: python
 # Cache our Gcloud SDK between commands
+cache:
+  directories:
+        - $HOME/gcloud/
+env:
+        - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/client_secrets.json #Other environment variables on same line
 
 before_install:
 #ENCRYPT YOUR PRIVATE KEY (If you need authentication)
