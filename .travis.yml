@@ -25,5 +25,5 @@ script:
 # [START deploy]
 # Deploy the app
   # - gcloud app create  --region=europe-west -q 
-  - gcloud app deploy app.yaml -q --version 1
+  - gcloud app deploy app.yaml -q --version 2
 # [END deploy]
