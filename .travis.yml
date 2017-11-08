@@ -6,63 +6,23 @@ cache:
     - $HOME/gcloud/
 env:
   - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/client_secrets.json 
-#Other environment variables on same line
 
 before_install:
-#ENCRYPT YOUR PRIVATE KEY (If you need authentication)
-        # 1. Install and login to the Travis CLI:
-        #       $ gem install travis
-        #       $ travis login
-        # 2. Move your json private key to client_secrets.json
-        # 3. Run:
-        #       $ travis encrypt-file client_secrets.json --add
-        # 4. Commit changes:
-        #       $ git add client_secrets.json.enc
-        #       $ git commit client_secrets.json.enc .travis.yml
-
-        - if [ ! -d $HOME/gcloud/google-cloud-sdk ]; then
-                mkdir -p $HOME/gcloud &&
-                wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz --directory-prefix=$HOME/gcloud &&
-                cd $HOME/gcloud &&
-                tar xzf google-cloud-sdk.tar.gz &&
-                printf '\ny\n\ny\ny\n' | ./google-cloud-sdk/install.sh &&
-                cd $TRAVIS_BUILD_DIR;
-          fi
-         - gcloud -q components update
-#        - if [ -a client_secrets.json ]; then
-#                gcloud -q auth activate-service-account --key-file client_secrets.json;
-#          fi
-          
-# Install Google App Engine Python SDK
-#- if [ ! -d "${GAE_PYTHONPATH}" ]; then
-#    python scripts/fetch_gae_sdk.py $(dirname "${GAE_PYTHONPATH}");
-#  fi
-# [START auth]
-# Decrypt the credentials we added to the repo using the key we added with the Travis command line tool
-
 - openssl aes-256-cbc -K $encrypted_71d955b72c3f_key -iv $encrypted_71d955b72c3f_iv -in gdglarioja-8eaa4e16b907.json.enc -out gdglarioja-8eaa4e16b907.json -d
-
-# If the SDK is not already cached, download it and unpack it
-#- if [ ! -d ${HOME}/google-cloud-sdk ]; then
-#     curl https://sdk.cloud.google.com | bash;
-#  fi
-##- tar -xzf credentials.tar.gz
-- mkdir -p lib
-# Here we use the decrypted service account credentials to authenticate the command line tool
+- if [ ! -d $HOME/gcloud/google-cloud-sdk ]; then
+           mkdir -p $HOME/gcloud && wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz --directory-prefix=$HOME/gcloud && cd $HOME/gcloud && tar xzf google-cloud-sdk.tar.gz && printf '\ny\n\ny\ny\n' | ./google-cloud-sdk/install.sh && cd $TRAVIS_BUILD_DIR;
+   fi
+- gcloud -q components update
+         
 - gcloud auth activate-service-account --key-file gdglarioja-8eaa4e16b907.json
 # [END auth]
 install:
-# Set the correct project to deploy to
+
 - gcloud config set project gdglarioja-site
 - gcloud -q components update gae-python
-# Install the Python dependencies
-##- pip install -r requirements.txt -t lib/
+
 script:
-# Run the unit tests
-##- python test_main.py
 # [START deploy]
 # Deploy the app
-- gcloud -q preview app deploy app.yaml --promote
-# Run and end to end test
-##- python e2e_test.py
+  - gcloud -q preview app deploy app.yaml --promote
 # [END deploy]
