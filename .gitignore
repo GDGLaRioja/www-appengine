@@ -103,6 +103,7 @@ ENV/
 # autogenerados
 *.log
 *.remmina
+*.swp
 
 .idea/
 gdglarioja-8eaa4e16b907.json
