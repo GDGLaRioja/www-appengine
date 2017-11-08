@@ -33,5 +33,8 @@ handlers:
   upload: fonts/(.*\.(woff$|woff2$|ttf$|eot$|svg$))
   application_readable: true
 
+- url: /single\.html
+  script: single.html
+
 - url: .*
   script: index.html
