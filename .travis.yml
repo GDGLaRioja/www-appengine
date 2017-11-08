@@ -2,6 +2,7 @@
 sudo: false
 language: python
 # Cache our Gcloud SDK between commands
+
 cache:
   directories:
         - $HOME/gcloud/
@@ -28,7 +29,7 @@ before_install:
                 printf '\ny\n\ny\ny\n' | ./google-cloud-sdk/install.sh &&
                 cd $TRAVIS_BUILD_DIR;
           fi
-        - gcloud -q components update
+         - gcloud -q components update
 #        - if [ -a client_secrets.json ]; then
 #                gcloud -q auth activate-service-account --key-file client_secrets.json;
 #          fi
