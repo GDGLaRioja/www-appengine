@@ -10,7 +10,7 @@ deploy:
   skip_cleanup: true
   keyfile: gdglarioja-8eaa4e16b907.json
   project: gdglarioja-site
-  version: 1
+  version: 2
   default: true
   on:
     all_branches: true
