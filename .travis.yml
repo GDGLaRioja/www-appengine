@@ -4,11 +4,9 @@ language: python
 # Cache our Gcloud SDK between commands
 cache:
   directories:
-  - "$HOME/google-cloud-sdk/"
+        - $HOME/gcloud/
 env:
-# Make sure gcloud command is on our PATH and the App Engine SDK is in the Python path
-- GAE_PYTHONPATH=${HOME}/.cache/google_appengine PATH=$PATH:${HOME}/google-cloud-sdk/bin PYTHONPATH=${PYTHONPATH}:${GAE_PYTHONPATH} CLOUDSDK_CORE_DISABLE_PROMPTS=1
-
+        - PATH=$PATH:$HOME/gcloud/google-cloud-sdk/bin GOOGLE_APPLICATION_CREDENTIALS=$TRAVIS_BUILD_DIR/client_secrets.json #Other environment variables on same line
 
 before_install:
 #ENCRYPT YOUR PRIVATE KEY (If you need authentication)
