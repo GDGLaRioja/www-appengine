@@ -1,7 +1,7 @@
 ## www-appengine [![Build Status](https://travis-ci.org/GDGLaRioja/www-appengine.svg?branch=master)](https://travis-ci.org/GDGLaRioja/www-appengine)
 
 
-## DevFest Update Day
+## DevFest
 
 Usando:
 Material Design Template for DevFest 2017 Season
@@ -13,4 +13,5 @@ Repositorio para la creación de la web devfest La Rioja 2017 en el Centro Tecno
 
 =======
 ## devfestupdate
-Repositorio para el evento devfestupdate de La Rioja que se publica en el entorno de  app engine.
+Repositorio para el evento #DevFest17 de La Rioja que se publica en el entorno de  app engine.
+La web se publica en https://gdglarioja-site.appspot.com/
