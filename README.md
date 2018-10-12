@@ -1,4 +1,4 @@
-## www-appengine [![Build Status](https://travis-ci.org/GDGLaRioja/www-gdglarioja-site.svg?branch=master)](https://travis-ci.org/GDGLaRioja/www-gdglarioja-site)
+## www-appengine [![Build Status](https://travis-ci.org/GDGLaRioja/www-gdglarioja-site.appspot.com.svg?branch=master)](https://travis-ci.org/GDGLaRioja/www-gdglarioja-site.appspot.com)
 
 ## DevFest
 
