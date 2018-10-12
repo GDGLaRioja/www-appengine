@@ -107,3 +107,5 @@ ENV/
 
 .idea/
 gdglarioja-8eaa4e16b907.json
+.DS_Store
+upload/.Ds_Store
