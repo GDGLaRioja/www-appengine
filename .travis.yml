@@ -27,3 +27,6 @@ script:
   # - gcloud app create  --region=europe-west -q 
   - gcloud app deploy app.yaml -q --version 2
 # [END deploy]
+
+notifications:
+    slack: gdgspaincommunity:ZRre3sTpGTzcfYywfHFq4x4n
