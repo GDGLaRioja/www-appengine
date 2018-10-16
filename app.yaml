@@ -38,3 +38,7 @@ handlers:
 
 - url: .*
   script: index.html
+
+  
+- url: /2017/.*
+  script: /2017/.*
