@@ -366,10 +366,13 @@ nav ul li.active > a {
 .intro {
   padding: 60px 0;
 }
-
+.section-wrap {
+  padding: 56px 0;
+}
 .intro-heading {
   font-size: 42px;
   line-height: 56px;
+  padding-top: 56px;
 }
 
 .intro-text {
