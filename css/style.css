@@ -925,21 +925,24 @@ nav ul li.active > a {
 .entry-img {
   position: relative;
   overflow: hidden;
+  padding-right: 25px;
 }
 
 .entry-img img {
+/* max-height:220px; 
   -webkit-transition: all 0.2s ease-out 0s;
   -moz-transition: all 0.2s ease-out 0s;
   -o-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s; */
 }
 
 .blog-col-3 .entry-img:hover img {
   opacity: 0.8;
-  -webkit-transform: scale(1.1, 1.1);
+ 
+  /* -webkit-transform: scale(1.1, 1.1);
   -ms-transform: scale(1.1, 1.1);
   -o-transform: scale(1.1, 1.1);
-  transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1); */
 }
 
 
